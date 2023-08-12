@@ -1,0 +1,29 @@
+version: "3"
+services:
+  web:
+    container_name: odoo_12
+    image: odoo:12
+    # build: ./
+    user: root
+    ports:
+      - "8099:8069"
+    depends_on:
+      - db_odoo_12
+    volumes:
+      - ./config:/etc/odoo:rw
+      - ./custom_addons:/var/lib/odoo/addons/12.0/custom_addons:rw
+    environment:
+      - HOST=db_odoo_12
+      - USER=odoo12
+      - PASSWORD=odoo12
+    # restart: always
+  db_odoo_12:
+    container_name: db_odoo_12
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo12
+      - POSTGRES_USER=odoo12
+    ports:
+      - "5434:5432"
+    # restart: always
