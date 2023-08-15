@@ -11,7 +11,7 @@ docker-compose up -d
 ## add addon
 
 ```
-docker exec odoo_12 odoo scaffold asdf1 /var/lib/odoo/addons/12.0/custom_addons
+docker exec odoo_12 odoo scaffold addon_name /var/lib/odoo/addons/12.0/custom_addons
 ```
 
 ```

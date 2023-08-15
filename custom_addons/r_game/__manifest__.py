@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 {
+    'application': True,
     'name': "r_game",
 
     'summary': """
@@ -24,7 +25,9 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
+        # 'views/menu.xml',
+        'views/hero.xml',
         'views/views.xml',
         'views/templates.xml',
     ],
