@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
         <menuitem id="hero_root_menu" name="Hero" sequence="20"/>
         <menuitem id="hero_root_sub_menu" name="List Hero" parent="hero_root_menu" sequence="20"/>
+
     </data>
 </odoo>

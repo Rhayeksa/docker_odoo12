@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
     container_name: odoo_12
-    image: odoo:12
+    image: odoo:12.0
     # build: ./
     user: root
     ports:
@@ -10,8 +10,8 @@ services:
     depends_on:
       - db_odoo_12
     volumes:
-      - ./config:/etc/odoo:rw
-      - ./custom_addons:/var/lib/odoo/addons/12.0/custom_addons:rw
+      - ./config:/etc/odoo
+      - ./custom_addons:/var/lib/odoo/addons/12.0/custom_addons
     environment:
       - HOST=db_odoo_12
       - USER=odoo12
